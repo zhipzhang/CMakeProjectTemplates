@@ -1,0 +1,14 @@
+# This is the template for the ExamplelibConfig.cmake file
+
+
+# The following variables will be set by find_package(Examplelib)
+# Examplelib_FOUND
+
+# In the future, maybe we should have the following variables
+# Examplelib_INCLUDE_DIRS
+# Examplelib_LIBRARIES
+@PACKAGE_INIT@
+
+set_and_check(Examplelib_LIB_DIRS "@PACKAGE_LIB_INSTALL_DIR@")
+include("${Examplelib_LIB_DIRS}/ExamplelibTargets.cmake")
+check_required_components(Examplelib)
