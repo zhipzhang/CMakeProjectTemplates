@@ -20,7 +20,7 @@ namespace Utils {
      * 
      * @param min The lower bound of the random number.
      * @param max The upper bound of the random number.
-     * @return double A random number uniformly distributed between min and max.
+     * @return A random number uniformly distributed between min and max.
      */
     double uniform_distribution(double min, double max);
 
@@ -29,7 +29,7 @@ namespace Utils {
      * 
      * @param mean The mean of the normal distribution.
      * @param stddev The standard deviation of the normal distribution.
-     * @return double A random number following a normal distribution.
+     * @return A random number following a normal distribution.
      */
     double normal_distribution(double mean, double stddev);
 
@@ -37,7 +37,7 @@ namespace Utils {
      * @brief Generates a random number following a Poisson distribution.
      * 
      * @param mean The mean of the Poisson distribution.
-     * @return double A random number following a Poisson distribution.
+     * @return A random number following a Poisson distribution.
      */
     double poisson_distribution(double mean);
 
@@ -46,7 +46,7 @@ namespace Utils {
      * 
      * @param x The x-coordinates of the data points.
      * @param y The y-coordinates of the data points.
-     * @return double The approximate integral of the function.
+     * @return The approximate integral of the function.
      */
     double SimpleTrapzIntegral(const vector<double>& x, const vector<double>& y);
 }

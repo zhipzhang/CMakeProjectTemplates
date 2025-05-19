@@ -13,6 +13,8 @@ if (CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
     # Add the Docs and Tests subdirectories
     find_package(Doxygen)
     if(Doxygen_FOUND)
+        list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
+        include(Doxygen)
         add_subdirectory(docs)
     else()
         message(STATUS "Doxygen not found, skipping documentation generation.")
