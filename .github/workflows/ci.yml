@@ -15,7 +15,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
+      - name: update submodules
+        run: git submodule update --init --recursive
       - name: Set up CMake
         uses: jwlawson/actions-setup-cmake@v1
         with:
