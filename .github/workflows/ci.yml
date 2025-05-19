@@ -38,7 +38,7 @@ jobs:
           cd build && ctest --extra-verbose --output-on-failure || echo "Tests failed"
       - name: Upload static files
         id: deployment
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-pages-artifact@v3
         with:
           path: install/docs
 
