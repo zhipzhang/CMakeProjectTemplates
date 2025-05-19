@@ -1,5 +1,6 @@
 #include "Utils.hh"
 #include <random>
+#include <stdexcept>
 
 static std::mt19937 rng(std::random_device{}());
 
