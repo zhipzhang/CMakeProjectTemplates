@@ -13,3 +13,10 @@ The project includes:
 
 The gitignore file is copied from the [website](https://gist.github.com/Yousha/3830712334ac30a90eb6041b932b68d7)
 
+## CMake structure
+This project contain the following parts which will be installed in `cmake --install`
+- ExampleLibConfig.cmake generated from the template `cmake/ExamplelibConfig.cmake.in`
+- ExamplelibConfigVersion.cmake generated automatically by `write_basic_package_version_file`
+- ExamplelibTargets.cmake by `INSTALL(EXPORT)`
+
+

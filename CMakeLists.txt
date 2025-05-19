@@ -9,7 +9,7 @@ if (CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
     # Make sure use the -std=c++xx not -std=gnu++xx
     set(CMAKE_CXX_EXTENSIONS OFF)
     include(CTest)
-
+    enable_testing()
     # Add the Docs and Tests subdirectories
     find_package(Doxygen)
     if(Doxygen_FOUND)
@@ -20,7 +20,7 @@ if (CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
 
     add_subdirectory(tests)
 endif()
-
+add_subdirectory(extern)
 add_subdirectory(src)
 
 install(TARGETS Examplelib
