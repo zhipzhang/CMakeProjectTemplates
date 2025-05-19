@@ -31,4 +31,18 @@ jobs:
           cmake --build build
           cmake --install build --prefix install
           cd build && ctest --extra-verbose --output-on-failure
-          
+      - name: Upload static files
+        id: depolyment
+        uses: actions/upload-artifact@v3
+        with:
+          path: install/docs
+
+deploy:
+  environment:
+    name: github-pages
+    url: ${{ steps.depolyment.outputs.page_url }}
+  runs-on: ubuntu-latest
+  steps:
+    - name: Depoly to Github Pages
+      id: deployment
+      usees: actions/deploy-pages@v4
